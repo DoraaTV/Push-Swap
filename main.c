@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:13:29 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/14 14:57:59 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/14 15:57:33 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,15 @@ int main(int ac, char **av)
 	taba = (long *)malloc(sizeof(long) * ft_stack_len(ac, av));
 	tabb = (long *)malloc(sizeof(long) * ft_stack_len(ac, av));
 	if (ft_append_numbers(taba, av, size_a) == -1 || ft_is_sorted(taba, size_a) == 0)
-		ft_free(taba, tabb, size_a);
+		ft_free(taba, tabb, size_a, size_b);
 	if (size_a[0] == 2 && taba[0] > taba[1])
 		rotate_a(taba, size_a[0]);
+	else if (size_a[0] == 3)
+		sort_three_digit(taba, size_a[0]);
+	//else if (size_a[0] == 5)
+	//	sort_five_digit(taba, tabb, size_a, size_b);
+	//else
+	//	sort_others_digit(taba, tabb, size_a[0], size_b[0]);
+	ft_free(taba, tabb, size_a, size_b);
+	return (0);
 }

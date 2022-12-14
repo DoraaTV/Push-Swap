@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:51:36 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/14 12:29:43 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/14 15:52:08 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-void    ft_free(long *taba, long *tabb, int *size)
+void    ft_free(long *taba, long *tabb, int *size_a, int *size_b)
 {
     free(taba);
     free(tabb);
-    free(size);
+    free(size_a);
+    free(size_b);
     exit(0);
 }
 
