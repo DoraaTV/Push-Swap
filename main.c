@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:13:29 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/14 12:31:09 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/14 14:57:59 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,15 +59,18 @@ int main(int ac, char **av)
 {
 	long    *taba;
 	long    *tabb;
-	int     *size;
+	int     *size_a;
+	int		*size_b;
 
-	size = (int *)malloc(sizeof(int));
-	size[0] = ac - 1;
-	ft_checker(ac, av, size);
+	size_a = (int *)malloc(sizeof(int));
+	size_b = (int *)malloc(sizeof(int));
+	size_a[0] = ac - 1;
+	size_b[0] = 0;
+	ft_checker(ac, av, size_a);
 	taba = (long *)malloc(sizeof(long) * ft_stack_len(ac, av));
 	tabb = (long *)malloc(sizeof(long) * ft_stack_len(ac, av));
-	if (ft_append_numbers(taba, av, size) == -1 || ft_is_sorted(taba, size) == 0)
-		ft_free(taba, tabb, size);
-	if (size[0] == 2 && taba[0] > taba[1])
-		rotate_a(taba, size[0]);
+	if (ft_append_numbers(taba, av, size_a) == -1 || ft_is_sorted(taba, size_a) == 0)
+		ft_free(taba, tabb, size_a);
+	if (size_a[0] == 2 && taba[0] > taba[1])
+		rotate_a(taba, size_a[0]);
 }

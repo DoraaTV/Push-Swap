@@ -6,11 +6,11 @@
 #    By: thrio <thrio@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 12:22:35 by thrio             #+#    #+#              #
-#    Updated: 2022/12/14 12:39:13 by thrio            ###   ########.fr        #
+#    Updated: 2022/12/14 14:01:00 by thrio            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.c ft_split.c ft_utils1.c ft_utils2.c ft_utils3.c rotate.c
+SRCS	= main.c reverse.c push.c swap.c ft_split.c ft_utils1.c ft_utils2.c ft_utils3.c rotate.c
 
 OBJS	= ${SRCS:.c=.o}
 
@@ -42,4 +42,4 @@ re:		fclean all
 norminette:
 		norminette ${SRCS}
 
-.PHONY:		all clean fclean re norminette bonus
+.PHONY:		all clean fclean re norminette
