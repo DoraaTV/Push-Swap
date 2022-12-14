@@ -6,11 +6,11 @@
 #    By: thrio <thrio@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 12:22:35 by thrio             #+#    #+#              #
-#    Updated: 2022/12/14 15:50:54 by thrio            ###   ########.fr        #
+#    Updated: 2022/12/14 17:52:11 by thrio            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= sort3.c main.c reverse.c push.c swap.c ft_split.c ft_utils1.c ft_utils2.c ft_utils3.c rotate.c
+SRCS	= sort5.c sort3.c main.c reverse.c push.c swap.c ft_split.c ft_utils1.c ft_utils2.c ft_utils3.c rotate.c
 
 OBJS	= ${SRCS:.c=.o}
 
@@ -27,7 +27,7 @@ CFLAGS	= -Wall -Wextra -Werror
 
 ${NAME} :	${OBJS}
 		ar rc ${NAME} ${OBJS}
-		${CC} ${CFLAGS} -o pushswap main.o pushswap.a
+		${CC} ${CFLAGS} -o push_swap main.o pushswap.a
 
 all:		${NAME}
 
@@ -35,7 +35,7 @@ clean:
 		${RM} ${OBJS} ${OBJS2}
 
 fclean:		clean
-		${RM} ${NAME} pushswap
+		${RM} ${NAME} push_swap
 
 re:		fclean all
 

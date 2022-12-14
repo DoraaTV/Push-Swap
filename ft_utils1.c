@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:51:36 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/14 15:52:08 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/14 18:21:17 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	ft_append_numbers(long *taba,char **av, int *size)
 	}
 	if (ft_is_repeated(taba, size[0]) == -1)
 		return (-1);
-	if (ft_number_limits(taba, size[0] == -1))
+	if (ft_number_limits(taba, size[0]) == -1)
 		return (-1);
 	return (0);
 }

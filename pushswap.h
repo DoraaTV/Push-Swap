@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:30:59 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/14 15:51:04 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/14 18:19:22 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@
 /*-------------*/
 
 size_t	ft_strlen(const char *str);
-void	ft_with_error(int *size);
-void	ft_checker(int ac, char **av, int *size);
+void	ft_with_error(int *size_a, int *size_b);
+void	ft_checker(int ac, char **av, int *size_a, int *size_b);
 void	ft_free(long *taba, long *tabb, int *size_a, int *size_b);
 int		ft_is_sorted(long *taba, int *size);
 int		ft_stack_len(int ac, char **av);
@@ -53,5 +53,6 @@ void	reverse_b(long *tabb, int size);
 void	reverse_a(long *taba, int size);
 void	reverse_ab(long *taba, long *tabb, int size_a, int size_b);
 void    sort_three_digit(long *taba, int size);
+void    sort_five_digit(long *taba, long *tabb, int *size_a, int *size_b);
 
 #endif
