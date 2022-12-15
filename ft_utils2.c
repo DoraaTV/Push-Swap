@@ -6,16 +6,16 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 10:52:39 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/14 11:36:12 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/15 14:46:06 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *nptr)
 {
-	int	neg;
-	int	res;
+	long	neg;
+	long	res;
 
 	neg = 1;
 	res = 0;
@@ -35,10 +35,10 @@ int	ft_atoi(const char *nptr)
 	return (res * neg);
 }
 
-int ft_is_repeated(long *taba, int size)
+int	ft_is_repeated(long *taba, int size)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -59,9 +59,9 @@ int ft_is_repeated(long *taba, int size)
 	return (0);
 }
 
-void    ft_dofree(char **str)
+void	ft_dofree(char **str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -98,9 +98,9 @@ int	ft_case_string(long *taba, int *size, char **av, char **buffer)
 	return (0);
 }
 
-int ft_case_normal(long *taba, int *size, char **av)
+int	ft_case_normal(long *taba, int *size, char **av)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < size[0])

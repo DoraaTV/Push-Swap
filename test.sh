@@ -2,7 +2,7 @@
 
 max=0
 test_nb=1000
-value_nb=3
+value_nb=5
 min_val=1
 max_val=100000
 for i in `seq 1 $test_nb`

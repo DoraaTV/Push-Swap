@@ -6,16 +6,16 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:52:36 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/14 15:20:17 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/15 14:54:14 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void    rotate_a(long *taba, int size)
+void	rotate_a(long *taba, int size)
 {
-	int i;
-	long    buf;
+	int		i;
+	long	buf;
 
 	i = 0;
 	while (i < size - 1)
@@ -37,10 +37,10 @@ void    rotate_a(long *taba, int size)
 	write(1, "ra\n", 3);
 }
 
-void    rotate_b(long *tabb, int size)
+void	rotate_b(long *tabb, int size)
 {
-	int i;
-	long    buf;
+	int		i;
+	long	buf;
 
 	i = 0;
 	while (i < size - 1)
@@ -62,7 +62,7 @@ void    rotate_b(long *tabb, int size)
 	write(1, "rb\n", 3);
 }
 
-void    rotate_ab(long *taba, long *tabb, int size_a, int size_b)
+void	rotate_ab(long *taba, long *tabb, int size_a, int size_b)
 {
 	int		i;
 	long	buf;

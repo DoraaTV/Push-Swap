@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:51:36 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/14 18:21:17 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/15 14:45:17 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,37 +22,37 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-void    ft_free(long *taba, long *tabb, int *size_a, int *size_b)
+void	ft_free(long *taba, long *tabb, int *size_a, int *size_b)
 {
-    free(taba);
-    free(tabb);
-    free(size_a);
-    free(size_b);
-    exit(0);
+	free(taba);
+	free(tabb);
+	free(size_a);
+	free(size_b);
+	exit(0);
 }
 
-int ft_stack_len(int ac, char **av)
+int	ft_stack_len(int ac, char **av)
 {
-    int i;
-    int size;
+	int	i;
+	int	size;
 
-    i = 0;
-    size = 1;
-    if (ac == 2)
-    {
-        while (av[1][i])
-        {
-            if (av[1][i] == 32)
-                size++;
-            i++;
-        }
-    }
-    else
-        size = ac - 1;
-    return (size);
+	i = 0;
+	size = 1;
+	if (ac == 2)
+	{
+		while (av[1][i])
+		{
+			if (av[1][i] == 32)
+				size++;
+			i++;
+		}
+	}
+	else
+		size = ac - 1;
+	return (size);
 }
 
-int	ft_append_numbers(long *taba,char **av, int *size)
+int	ft_append_numbers(long *taba, char **av, int *size)
 {
 	char	**buffer;
 
@@ -74,25 +74,25 @@ int	ft_append_numbers(long *taba,char **av, int *size)
 	return (0);
 }
 
-int ft_is_sorted(long *taba, int *size)
+int	ft_is_sorted(long *taba, int *size)
 {
-    int i;
-    int j;
-    long max;
+	long	max;
+	int		i;
+	int		j;
 
-    i = 1;
-    j = 0;
-    max = taba[0];
-    while (i < size[0])
-    {
-            if (max < taba[i])
-            {
-                max = taba[i];
-                j++;
-            }
-        i++;
-    }
-    if (j == size[0] - 1)
-        return (0);
-    return (-1);
+	i = 1;
+	j = 0;
+	max = taba[0];
+	while (i < size[0])
+	{
+		if (max < taba[i])
+		{
+			max = taba[i];
+			j++;
+		}
+		i++;
+	}
+	if (j == size[0] - 1)
+		return (0);
+	return (-1);
 }
