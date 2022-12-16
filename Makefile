@@ -6,11 +6,11 @@
 #    By: thrio <thrio@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 12:22:35 by thrio             #+#    #+#              #
-#    Updated: 2022/12/14 17:52:11 by thrio            ###   ########.fr        #
+#    Updated: 2022/12/16 09:16:36 by thrio            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= sort5.c sort3.c main.c reverse.c push.c swap.c ft_split.c ft_utils1.c ft_utils2.c ft_utils3.c rotate.c
+SRCS	= sort_other.c sort5.c sort3.c main.c reverse.c push.c swap.c ft_split.c ft_utils1.c ft_utils2.c ft_utils3.c rotate.c
 
 OBJS	= ${SRCS:.c=.o}
 

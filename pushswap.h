@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:30:59 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/15 14:53:28 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/16 09:24:37 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ void	reverse_a(long *taba, int size);
 void	reverse_ab(long *taba, long *tabb, int size_a, int size_b);
 void	sort_three_digit(long *taba, int size);
 void	sort_five_digit(long *taba, long *tabb, int *size_a, int *size_b);
+void	sort_other_digit(long *taba, long *tabb, int *size_a, int *size_b);
 
 #endif
