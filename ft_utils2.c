@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 10:52:39 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/15 14:46:06 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/16 11:23:43 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_is_repeated(long *taba, int size)
 		{
 			if (taba[i] == taba[j] && i != j)
 			{
-				write(1, "Error\n", 6);
+				write(2, "Error\n", 6);
 				return (-1);
 			}
 			j++;
@@ -109,7 +109,7 @@ int	ft_case_normal(long *taba, int *size, char **av)
 			taba[i] = ft_atoi(av[i + 1]);
 		else
 		{
-			write(1, "Error\n", 6);
+			write(2, "Error\n", 6);
 			return (-1);
 		}
 		i++;

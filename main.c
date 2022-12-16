@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:13:29 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/16 10:05:19 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/16 10:55:17 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_with_error(int *size_a, int *size_b)
 {
 	free(size_a);
 	free(size_b);
-	write(1, "Error\n", 6);
+	write(2, "Error\n", 6);
 	exit(0);
 }
 
