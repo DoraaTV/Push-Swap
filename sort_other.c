@@ -6,13 +6,13 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 14:40:09 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/16 09:36:34 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/16 10:05:16 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	ft_first_occur(long *tabconverted, long *copy, long *taba, int *size_a)
+void	ft_make_copy(long *tabconverted, long *copy, long *taba, int *size_a)
 {
 	int	i;
 	
@@ -49,7 +49,7 @@ void	ft_bubble_sort(long *tabconverted, int *size_a)
 	}
 }
 
-void	ft_second_occur(long *tabconverted, long *tabcopy, long *taba, int *size_a)
+void	ft_converter(long *tabconverted, long *tabcopy, long *taba, int *size_a)
 {
 	int	i;
 	int	j;
@@ -63,7 +63,6 @@ void	ft_second_occur(long *tabconverted, long *tabcopy, long *taba, int *size_a)
 			if (tabcopy[i] == tabconverted[j])
 			{
 				taba[i] = j;
-				printf("%d\n", j);
 			}
 			j++;
 		}
@@ -71,7 +70,7 @@ void	ft_second_occur(long *tabconverted, long *tabcopy, long *taba, int *size_a)
 	}
 }
 
-void	ft_last_occur(long *taba, long *tabb, int *size_a, int *size_b)
+void	ft_sort(long *taba, long *tabb, int *size_a, int *size_b)
 {
 	int	size;
 	int	bitssize;
@@ -106,10 +105,10 @@ void	sort_other_digit(long *taba, long *tabb, int *size_a, int *size_b)
 
 	tabcopy = (long *)malloc(sizeof(long) * size_a[0]);
 	tabconverted = (long *)malloc(sizeof(long) * size_a[0]);
-	ft_first_occur(tabconverted, tabcopy, taba, size_a);
+	ft_make_copy(tabconverted, tabcopy, taba, size_a);
 	ft_bubble_sort(tabconverted, size_a);
-	ft_second_occur(tabconverted, tabcopy, taba, size_a);
+	ft_converter(tabconverted, tabcopy, taba, size_a);
 	free(tabcopy);
 	free(tabconverted);
-	ft_last_occur(taba, tabb, size_a, size_b);
+	ft_sort(taba, tabb, size_a, size_b);
 }

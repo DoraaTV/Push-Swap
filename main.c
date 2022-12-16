@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:13:29 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/16 09:34:18 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/16 10:05:19 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ int	main(int ac, char **av)
 		sort_five_digit(taba, tabb, size_a, size_b);
 	else
 		sort_other_digit(taba, tabb, size_a, size_b);
-	printf("%ld %ld %ld %ld %ld %ld", taba[0], taba[1], taba[2], taba[3], taba[4], taba[5]);
 	ft_free(taba, tabb, size_a, size_b);
 	return (0);
 }
