@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 14:40:09 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/16 10:05:16 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/19 10:10:58 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_make_copy(long *tabconverted, long *copy, long *taba, int *size_a)
 {
 	int	i;
-	
+
 	i = 0;
 	while (i < size_a[0])
 	{

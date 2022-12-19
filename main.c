@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:13:29 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/16 10:55:17 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/19 15:38:42 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,26 +30,26 @@ void	ft_without_error(int *size_a, int *size_b)
 void	ft_checker(int ac, char **av, int *size_a, int *size_b)
 {
 	int		i;
+	int		buf;
 	size_t	j;
 
 	i = 1;
-	j = 0;
 	if (ac < 2)
 		ft_without_error(size_a, size_b);
 	while (i < ac)
 	{
-		if (av[i][ft_strlen(av[i]) - 1] == ' ' || av[i][0] == ' ')
-			ft_with_error(size_a, size_b);
 		j = 0;
+		buf = 0;
+		if (!av[i][j])
+			ft_with_error(size_a, size_b);
 		while (j < ft_strlen(av[i]))
 		{
 			if ((av[i][j] < 48 || av[i][j] > 57) && av[i][j] != 32)
-			{
-				if (av[i][j] != 45)
+				if ((av[i][j] == 45 && (buf > 0 && av[i][j - 1] != 32))
+				|| av[i][j] != 45)
 					ft_with_error(size_a, size_b);
-			}
-			if (av[i][j] == 32 && av[i][j + 1] == 32)
-				ft_with_error(size_a, size_b);
+			if (av[i][j] > 48 && av[i][j] < 57)
+				buf++;
 			j++;
 		}
 	i++;

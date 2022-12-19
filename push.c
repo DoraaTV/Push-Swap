@@ -6,7 +6,7 @@
 /*   By: thrio <thrio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:44:33 by thrio             #+#    #+#             */
-/*   Updated: 2022/12/15 14:52:38 by thrio            ###   ########.fr       */
+/*   Updated: 2022/12/19 13:31:06 by thrio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	push_b(long *taba, long *tabb, int *size_a, int *size_b)
 	}
 	tabb[0] = taba[0];
 	i = 0;
-	while (i < size_a[0])
+	while (i < size_a[0] - 1)
 	{
 		taba[i] = taba[i + 1];
 		i++;
